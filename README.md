@@ -1,7 +1,4 @@
-PlusEVCoin (FOO)
-===========
+PlusEVCoin (PEVC)
+=================
 
-[![Build Status](https://travis-ci.org/RazorLove/plusevcoin.png?branch=master)](https://travis-ci.org/RazorLove/plusevcoin)
-
-
-Scrypt Hashcash PoW Template
+Cryptocurrency of the poker community.

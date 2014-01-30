@@ -46,12 +46,12 @@ QString BitcoinUnits::description(int unit)
     switch(unit)
     {
     case BTC: return QString("PlusEVCoin");
-    case mBTC: return QString("milliPlusEVCoin (1 / 1,000)");
-    case uBTC: return QString("microPlusEVCoin (1 / 1,000,000)");
+    case mBTC: return QString("milliPEVCoin (1 / 1,000)");
+    case uBTC: return QString("microPEVCoin (1 / 1,000,000)");
     default: return QString("???");
     }
 }
-//a single unit (.00000001) of PlusEVCoin is called a "wander."
+//a single unit (.00000001) of PlusEVCoin is called a "chip".
 qint64 BitcoinUnits::factor(int unit)
 {
     switch(unit)
