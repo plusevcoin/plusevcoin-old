@@ -828,12 +828,13 @@ uint256 static GetOrphanRoot(const CBlock* pblock)
 
 int64 static GetBlockValue(int nHeight, int64 nFees)
 {
-    int64 nSubsidy = 1 * COIN;
-
+    int64 nSubsidy = 50 * COIN;
+    // PlusEVCoin: Subsidy is cut in half every 1,000,000 blocks, which will occur approximately every 4 years
+    nSubsidy >>= (nHeight / 1000000);
     return nSubsidy + nFees;
 }
 
-static const int64 nTargetTimespan = 1 * 24 * 60 * 60; // PlusEVCoin: 1 days
+static const int64 nTargetTimespan = 1 * 8 * 60 * 60; // PlusEVCoin: retarget time 8 hours
 static const int64 nTargetSpacing = 120; // PlusEVCoin: 2 minute blocks
 static const int64 nInterval = nTargetTimespan / nTargetSpacing;
 
